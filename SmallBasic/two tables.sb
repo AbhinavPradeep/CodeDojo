@@ -1,0 +1,7 @@
+TextWindow.WriteLine("till where do you want me to print : ")
+e = TextWindow.ReadNumber()
+For i = 0 To e Step 1 
+  x = i + 1
+  r = 2 * x
+ TextWindow.WriteLine("2 * " + x +"=" + r )
+EndFor 

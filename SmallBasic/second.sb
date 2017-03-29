@@ -1,0 +1,7 @@
+TextWindow.WriteLine ("enter 1st no. :")
+num1 = TextWindow .Read()
+TextWindow.WriteLine ("now enter the 2nd no. : " )
+num2 = TextWindow.Read()
+num3 = num1 + num2
+TextWindow.WriteLine( "abrakadabra boom " + num3)
+

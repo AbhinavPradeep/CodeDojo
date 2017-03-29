@@ -1,0 +1,10 @@
+TextWindow.WriteLine("enter the no. :")
+num = TextWindow.ReadNumber()
+rem = Math.Remainder(num, 2)
+If (rem = 0) Then
+  TextWindow.WriteLine ( " it is even " )
+Else 
+  TextWindow.WriteLine( " it is odd " )
+EndIf
+  
+  
