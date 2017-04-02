@@ -1,0 +1,10 @@
+GraphicsWindow.Width = 600
+GraphicsWindow.Height = 600
+
+For i = 1 To 5 
+  GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+  GraphicsWindow.BrushColor = GraphicsWindow.GetRandomColor()
+  x = Math.GetRandomNumber(300)
+  y = Math.GetRandomNumber(300)
+  GraphicsWindow.FillEllipse( x, y, 30, 30)
+EndFor
