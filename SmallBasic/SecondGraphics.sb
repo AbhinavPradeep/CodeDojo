@@ -1,0 +1,7 @@
+GraphicsWindow.Show()
+GraphicsWindow.BackgroundColor = "SteelBlue"
+For i=0 To 100 Step 1
+  GraphicsWindow.DrawEllipse(100 + i, 100 + i, i + 190, i + 190)
+EndFor
+
+

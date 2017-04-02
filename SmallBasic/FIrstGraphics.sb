@@ -1,0 +1,9 @@
+GraphicsWindow.BackgroundColor = "SteelBlue"
+GraphicsWindow.Title =  " crisscross"
+GraphicsWindow.Width =  567
+GraphicsWindow.Height = 667
+GraphicsWindow.PenColor = "Red"
+GraphicsWindow.DrawLine  (10 , 10 , 100 , 100 )
+GraphicsWindow.DrawLine  (10 ,100  , 100 ,10 )
+GraphicsWindow.DrawEllipse ( 300,200,122,346 )
+GraphicsWindow.Show()
