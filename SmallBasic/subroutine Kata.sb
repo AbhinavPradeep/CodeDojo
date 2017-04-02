@@ -1,0 +1,28 @@
+TextWindow.Write("Enter number 1 ")
+x = TextWindow.ReadNumber()
+
+TextWindow.Write("Enter number 2 ")
+y = TextWindow.ReadNumber()
+
+TextWindow.Write("Enter operation - ")
+oper = TextWindow.Read()
+If oper = "add" Then
+  AddNumbers()
+ElseIf oper = "subtract" then
+  SubtractNumbers()
+EndIf
+
+' subroutine to add and print 2 numbers
+Sub AddNUmbers
+  result = x + y
+  TextWindow.WriteLine("Sum is " + result)  
+EndSub
+
+' subroutine to subtract and print 2 numbers
+Sub SubtractNumbers
+  result = x - y
+  TextWindow.WriteLine("Diffference is " + result)  
+EndSub
+
+
+
