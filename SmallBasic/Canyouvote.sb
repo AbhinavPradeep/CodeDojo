@@ -1,0 +1,7 @@
+TextWindow.WriteLine("what is you age")
+age = TextWindow.ReadNumber()
+If (age > 17 ) Then
+  TextWindow.WriteLine ( "you are eligible to vote" )
+Else
+  TextWindow.WriteLine ( "sorry you cannot vote")
+EndIf
