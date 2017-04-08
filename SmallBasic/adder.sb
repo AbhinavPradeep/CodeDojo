@@ -1,0 +1,12 @@
+If Program.ArgumentCount = 0 Then
+  TextWindow.WriteLine("please enter two numbers to add")
+  TextWindow.Read()
+  Program.End()
+EndIf
+
+num1 = Program.GetArgument(1)
+num2 = Program.GetArgument(2)
+
+num3 = num1 + num2
+
+TextWindow.WriteLine("sum of " + num1 + " & " + num2 + " is " + num3 )

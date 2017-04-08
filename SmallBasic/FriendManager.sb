@@ -19,10 +19,13 @@ Controls.ButtonClicked = Butclicked
 
 Sub Butclicked
   if Controls. LastClickedButton = quit Then
+    Sound.PlayClick()
     Program.End()
   Elseif Controls.LastClickedButton = save Then
+    Sound.PlayClick()
     SaveData()
   Else
+    Sound.PlayClick()
     Cleardata()
   EndIf 
 EndSub
@@ -40,6 +43,5 @@ EndSub
 Sub Cleardata
   Controls.SetTextBoxText (txtname, "")
   Controls.SetTextBoxText (txttel, "")
-   Controls.SetTextBoxText (txtaddr, "")
- EndSub
- 
+  Controls.SetTextBoxText (txtaddr, "")  
+EndSub
