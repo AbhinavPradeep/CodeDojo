@@ -1,0 +1,28 @@
+GraphicsWindow.Title = "Employee Directory"
+GraphicsWindow.Height = 600
+GraphicsWindow.Width = 600
+
+FilePath = "C:\Users\abhin\Documents\employee\employee.txt"
+
+GraphicsWindow.DrawText(10, 10, "Full Name")
+txtname = Controls.AddTextBox(90, 10)
+
+btnsave = Controls.AddButton(" Save ", 13, 55)
+btnQuit = Controls.AddButton(" Quit ", 63, 55)
+
+Controls.ButtonClicked = OnButtonClick
+
+Sub OnButtonClick
+  If Controls.LastClickedButton = btnQuit Then
+    Program.End()
+  EndIf
+  
+  If Controls.LastClickedButton = btnsave Then
+    empname = Controls.GetTextBoxText(txtname)
+    File.AppendContents(FilePath, empname)
+  EndIf  
+EndSub
+
+
+
+

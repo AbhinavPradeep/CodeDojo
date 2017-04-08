@@ -4,6 +4,7 @@ TextWindow.WriteLine ("what is the second number")
 num2 = TextWindow.ReadNumber()
 TextWindow.WriteLine ("what operation do you want me to execute .Options are add, subtract, multiply or divide" )
 op = TextWindow.Read()
+
 If op = "add" Then
   Addnumbers()
 ElseIf op = "subtract" then
@@ -14,21 +15,25 @@ ElseIf op = "divide" then
   divideNumbers()
 EndIf
 
+' Subroutine for adding
 Sub Addnumbers
 result = num1 + num2
   TextWindow.WriteLine("Sum is " + result)  
 EndSub
 
+'Subroutine for subtracting
 Sub SubtractNumbers
   result = num1 - num2
   TextWindow.WriteLine("Diffference is " + result)  
 EndSub
 
+'Subroutine for multiplying 
 Sub multiplynumbers
   result = num1 * num2
   TextWindow.WriteLine("Product is  " + result) 
 EndSub
 
+'Subroutione for dividing
 Sub divideNumbers
   result = num1 / num2
   TextWindow.WriteLine(" Quotient is " + result)

@@ -1,0 +1,45 @@
+GraphicsWindow.Title = "friendlist"
+GraphicsWindow.Height = 700
+GraphicsWindow.Width = 400
+
+GraphicsWindow.DrawText (10 ,10 ,"Name")
+GraphicsWindow.DrawText (10 ,50 , "telephone number")
+GraphicsWindow.DrawText (10 ,100, "Address")
+
+'GETTING THE TEXTBOXES
+txtname =  Controls.AddTextBox (60 ,10 )
+txttel =  Controls.AddTextBox ( 140, 50 )
+txtaddr =  Controls.AddTextBox ( 70 , 100)
+
+save = Controls.AddButton("save" 10,130)
+quit = Controls.AddButton("quit" 70,130)
+clear = Controls.AddButton("clear" 130,130)
+
+Controls.ButtonClicked = Butclicked
+
+Sub Butclicked
+  if Controls. LastClickedButton = quit Then
+    Program.End()
+  Elseif Controls.LastClickedButton = save Then
+    SaveData()
+  Else
+    Cleardata()
+  EndIf 
+EndSub
+
+Sub SaveData
+  FilePath = "C:\Users\abhin\Documents\friends\myfriends.txt"
+  tname = Controls.GetTextBoxText(txtname)
+  ttel = Controls.GetTextBoxText (txttel)
+  taddr = Controls.GetTextBoxText (txtaddr)
+  tspace = " | "
+  fileline = tname + tspace + ttel + tspace  + taddr
+  File.AppendContents (FilePath ,fileline)
+EndSub 
+
+Sub Cleardata
+  Controls.SetTextBoxText (txtname, "")
+  Controls.SetTextBoxText (txttel, "")
+   Controls.SetTextBoxText (txtaddr, "")
+ EndSub
+ 

@@ -1,0 +1,32 @@
+TextWindow.WriteLine ("what is your name ?")
+name = TextWindow.Read()
+
+TextWindow.WriteLine ("hello " + name )
+
+TextWindow.WriteLine("where do you want to go first ? ")
+place[1] = TextWindow.Read()
+
+TextWindow.WriteLine("where do you want to go second ? ")
+place[2] = TextWindow.Read()
+
+TextWindow.WriteLine("where do you wan to go third ? ")
+place[3] = TextWindow.Read()
+
+If Array.ContainsValue (place , "iran" ) Then
+  TextWindow.WriteLine ( "you cannot Go to  iran " )
+  EndIf
+If Array.ContainsValue (place , "iraq" ) Then
+  TextWindow.WriteLine ( "you cannot Go to  iraq " )
+  EndIf
+if Array.ContainsValue (place , "syria" ) Then
+  TextWindow.WriteLine ( "you cannot Go to  syria " )
+  EndIf
+if Array.ContainsValue (place , "lybia" ) Then
+  TextWindow.WriteLine ( "you cannot Go to lybia " )
+  EndIf
+if Array.ContainsValue (place , "sudan" ) Then
+  TextWindow.WriteLine ( "you cannot Go to sudan " )
+  EndIf
+if Array.ContainsValue (place , "somalia" ) Then
+   TextWindow.WriteLine ( "you cannot Go to somlia " )
+EndIf
