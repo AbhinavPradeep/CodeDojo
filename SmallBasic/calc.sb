@@ -1,0 +1,194 @@
+GraphicsWindow.Width = 300
+GraphicsWindow.Height = 300
+opclicked = "False"
+
+'getting the UI done
+
+txtNumBox = Controls.AddTextBox(65, 10)
+btnone = Controls.AddButton ( " 1 ",10, 40)
+btntwo = Controls.AddButton ( " 2 ",85, 40)
+btnthree = Controls.AddButton ( " 3 ",160, 40)
+btnfour = Controls.AddButton ( " 4 ",10, 80)
+btnfive = Controls.AddButton ( " 5 ",85, 80)
+btnsix = Controls.AddButton ( " 6 ",160, 80)
+btnseven = Controls.AddButton ( " 7 ",10, 120)
+btneight = Controls.AddButton ( " 8 ",85, 120)
+btnnine = Controls.AddButton ( " 9 ",160, 120)
+btn0 = Controls.AddButton ( " 0 ",10, 160)
+btnadd = Controls.AddButton ( " + ",235, 40)
+btnsub = Controls.AddButton ( " - ",235, 80)
+btnprod = Controls.AddButton ( " * ",235, 120)
+btndiv = Controls.AddButton ( " / ",235, 160)
+btnequ = Controls.AddButton ( " = ",85, 160)
+btnclear = Controls.AddButton ( " C ",160, 160)
+
+
+Controls.ButtonClicked = btnclick
+
+Sub btnclick   
+  If Controls.LastClickedButton = btnclear Then
+    Controls.SetTextBoxText(txtNumBox,"")
+    num1 = 0
+    num2 = 0
+    oper = ""
+   
+    EndIf
+  If Controls.LastClickedButton = btnone Then
+    Controls.SetTextBoxText(txtNumBox,1)
+    If opclicked = "False" Then
+      num1 = 1
+      TextWindow.WriteLine("Number 1 is " + 1 )
+    Else
+      num2 = 1
+      TextWindow.WriteLine("Number 2 is " + 1 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btntwo Then
+    Controls.SetTextBoxText(txtNumBox,2)
+    If opclicked = "False" Then
+      num1 = 2
+      TextWindow.WriteLine("Number 1 is " + 2 )
+    Else
+      num2 = 2
+      TextWindow.WriteLine("Number 2 is " + 2 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnthree Then
+    Controls.SetTextBoxText(txtNumBox,3)
+    If opclicked = "False" Then
+      num1 = 3
+      TextWindow.WriteLine("Number 1 is " + 3 )
+    Else
+      num2 = 3
+      TextWindow.WriteLine("Number 2 is " + 3 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnfour Then
+    Controls.SetTextBoxText(txtNumBox,4)
+    If opclicked = "False" Then
+      num1 = 4
+      TextWindow.WriteLine("Number 1 is " + 4 )
+    Else
+      num2 = 4
+      TextWindow.WriteLine("Number 2 is " + 4 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnfive Then
+    Controls.SetTextBoxText(txtNumBox,5)
+    If opclicked = "False" Then
+      num1 = 5
+      TextWindow.WriteLine("Number 1 is " + 5 )
+    Else
+      num2 = 5
+      TextWindow.WriteLine("Number 2 is " + 5 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnsix Then
+    Controls.SetTextBoxText(txtNumBox,6)
+    If opclicked = "False" Then
+      num1 = 6
+      TextWindow.WriteLine("Number 1 is " + 5 )
+    Else
+      num2 = 6
+      TextWindow.WriteLine("Number 2 is " + 6 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnseven Then
+    Controls.SetTextBoxText(txtNumBox,7)
+    If opclicked = "False" Then
+      num1 = 7
+      TextWindow.WriteLine("Number 1 is " + 7 )
+    Else
+      num2 = 7
+      TextWindow.WriteLine("Number 2 is " + 7 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btneight Then
+    Controls.SetTextBoxText(txtNumBox,8)
+    If opclicked = "False" Then
+      num1 = 8
+      TextWindow.WriteLine("Number 1 is " + 8 )
+    Else
+      num2 = 8
+      TextWindow.WriteLine("Number 2 is " + 8 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnnine Then
+    Controls.SetTextBoxText(txtNumBox,9)
+    If opclicked = "False" Then
+      num1 = 9
+      TextWindow.WriteLine("Number 1 is " + 9 )
+    Else
+      num2 = 9
+      TextWindow.WriteLine("Number 2 is " + 9 )
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btn0 Then
+    Controls.SetTextBoxText(txtNumBox,0)
+    If opclicked = "False" Then
+      num1 = 1
+    Else
+      num2 = 1
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btnprod Then
+    Controls.SetTextBoxText(txtNumBox,"*")
+    opclicked = "True"
+    oper ="product"
+    TextWindow.WriteLine("operator clicked is " + oper  )
+  EndIf
+  
+  If Controls.LastClickedButton = btnequ Then
+    Controls.SetTextBoxText(txtNumBox,"=")
+    TextWindow.WriteLine("operator clicked is ="  )
+    If oper = "add" Then
+      res = num1 + num2
+      Controls.SetTextBoxText(txtNumBox, res)
+    EndIf
+    If oper = "sub" Then
+      res = num1 - num2
+      Controls.SetTextBoxText(txtNumBox, res)
+      EndIf
+      If oper = "product" Then
+      res = num1 * num2
+      Controls.SetTextBoxText(txtNumBox, res)
+      EndIf
+      If oper = "divide" Then
+      res = num1 / num2
+      Controls.SetTextBoxText(txtNumBox, res)
+    EndIf
+  EndIf
+  
+  If Controls.LastClickedButton = btndiv Then
+    Controls.SetTextBoxText(txtNumBox,"/")
+    opclicked = "True"
+    oper ="divide"
+    TextWindow.WriteLine("operator clicked is " + oper  )
+  EndIf
+  
+  If Controls.LastClickedButton = btnsub Then
+    Controls.SetTextBoxText(txtNumBox, "-")
+    opclicked = "True"
+    oper = "sub"
+    TextWindow.WriteLine("operator clicked is " + oper  )
+  EndIf
+  
+  If Controls.LastClickedButton = btnadd Then
+    Controls.SetTextBoxText(txtNumBox,"+")
+    opclicked = "True"
+    oper = "add"
+    TextWindow.WriteLine("operator clicked is " + oper  )
+  EndIf
+  
+EndSub
+   
